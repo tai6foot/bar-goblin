@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Goblin</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1b1b1b;
+            color: #ffffff;
+        }
+        header {
+            background-color: #333333;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #ffcc00;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .menu, .contact {
+            display: none;
+            margin-top: 20px;
+        }
+        .menu-item {
+            background-color: #2d2d2d;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+        }
+        .menu-item h3 {
+            margin: 10px 0;
+        }
+        .member {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .member-item {
+            background-color: #2d2d2d;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .member-item h3 {
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #333333;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+            color: #bbbbbb;
+        }
+    </style>
+    <script>
+        function toggleSection(sectionId) {
+            const sections = document.querySelectorAll('.menu, .contact, #about, #members');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Bar Goblin</h1>
+    </header>
+    <nav>
+        <a onclick="toggleSection('about')">About</a>
+        <a onclick="toggleSection('menu')">Menu</a>
+        <a onclick="toggleSection('contact')">Contact</a>
+        <a onclick="toggleSection('members')">Members</a>
+    </nav>
+    <section id="about" style="display: block;">
+        <h2>About Bar Goblin</h2>
+        <p>EN: Bar Goblin was created to bring people together in a warm and inviting space, blending traditional bar culture with a modern twist. From craft cocktails to curated playlists, we aim to deliver unforgettable experiences for every guest.<br>
+        JP: Bar Goblinは、伝統的なバー文化と現代的なスタイルを融合し、人々が集う温かい空間を提供するために作られました。クラフトカクテルから厳選されたプレイリストまで、すべてのお客様に忘れられない体験をお届けします。<br>
+        DE: Bar Goblin wurde geschaffen, um Menschen in einer warmen und einladenden Umgebung zusammenzubringen, die traditionelle Barkultur mit einem modernen Touch verbindet. Von Craft-Cocktails bis hin zu kuratierten Playlists wollen wir jedem Gast unvergessliche Erlebnisse bieten.</p>
+    </section>
+    <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item"><h3>Classic Martini</h3><p>¥900</p></div>
+        <div class="menu-item"><h3>Craft Beer</h3><p>§700</p></div>
+        <div class="menu-item"><h3>Whiskey Sour</h3><p>¨800</p></div>
+        <div class="menu-item"><h3>Mojito</h3><p>¨800</p></div>
+        <div class="menu-item"><h3>Old Fashioned</h3><p>¨900</p></div>
+        <div class="menu-item"><h3>Negroni</h3><p>¨800</p></div>
+        <div class="menu-item"><h3>Espresso Martini</h3><p>¨900</p></div>
+        <div class="menu-item"><h3>Gin and Tonic</h3><p>§700</p></div>
+        <div class="menu-item"><h3>Margarita</h3><p>¨800</p></div>
+        <div class="menu-item"><h3>Pina Colada</h3><p>¨800</p></div>
+        <div class="menu-item"><h3>Rum Punch</h3><p>¨700</p></div>
+        <div class="menu-item"><h3>Mai Tai</h3><p>¨800</p></div>
+        <div class="menu-item"><h3>Sazerac</h3><p>¨900</p></div>
+        <div class="menu-item"><h3>Irish Coffee</h3><p>¨700</p></div>
+        <div class="menu-item"><h3>Bloody Mary</h3><p>¨800</p></div>
+        <div class="menu-item"><h3>Caipirinha</h3><p>¨800</p></div>
+        <div class="menu-item"><h3>Aperol Spritz</h3><p>¨700</p></div>
+        <div class="menu-item"><h3>Long Island Iced Tea</h3><p>¨900</p></div>
+        <div class="menu-item"><h3>Tequila Sunrise</h3><p>¨800</p></div>
+        <div class="menu-item"><h3>Champagne Cocktail</h3><p>¨900</p></div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>EN: Email: tai3180723@gmail.com<br>
+        JP: メール: tai3180723@gmail.com<br>
+        DE: E-Mail: tai3180723@gmail.com</p>
+    </section>
+    <section id="members" style="display: none;">
+        <h2>Meet Our Members</h2>
+        <div class="member">
+            <div class="member-item">
+                <h3>Leo</h3>
+                <p>Leo is a master mixologist with over 10 years of experience. His passion is creating innovative cocktails that surprise and delight guests.</p>
+            </div>
+            <div class="member-item">
+                <h3>Chris</h3>
+                <p>Chris is the friendly face behind the bar, known for his exceptional customer service and deep knowledge of spirits and wines.</p>
+            </div>
+            <div class="member-item">
+                <h3>Fillip</h3>
+                <p>Fillip brings creativity to the team as the head of bar design, ensuring every drink and detail meets the highest standards.</p>
+            </div>
+            <div class="member-item">
+                <h3>Tai</h3>
+                <p>Tai is the visionary founder of Bar Goblin, dedicated to providing an atmosphere where memories are made and shared.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Bar Goblin. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
